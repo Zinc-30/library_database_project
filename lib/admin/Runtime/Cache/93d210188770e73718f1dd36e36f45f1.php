@@ -1,0 +1,99 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图书馆--图书查询</title>
+<link rel="stylesheet" href="__PUBLIC__/css/form.css" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.2.6.js"></script>
+</head>
+<body>
+	<form action="<?php echo U('book_search');?>" method="post">
+	<h1>图书馆--图书查询</h1>
+	<div align="center">
+	<div class="contentA">
+		<div class="row">
+			<div class="left">书名</div>
+			<div class="right"><input name="title" type="text" class="text" /></div>
+			<div class="clear"></div>
+		</div>
+		<div class="row">
+			<div class="left">类别</div>
+			<div class="right"><select name="class" style="width: 195px">
+				<option value=></option>
+				<option value="科学">科学</option>
+				<option value="社会科学">社会</option>
+				<option value="教科书">教育</option>
+				<option value="当代小说">小说</option>
+				<option value="数学">数学</option>
+				<option value="美术">美术</option>
+				<option value="历史">历史</option>
+				<option value="漫画">漫画</option>
+				<option value="地理">地理</option>
+				<option value="文学">文学</option>
+				<option value="computer">计算机</option>
+				</select></div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="row">
+			<div class="left">出版商</div>
+			<div class="right"><input name="press" type="text" class="text" /></div>
+			<div class="clear"></div>
+		</div>
+		<div class="row">
+			<div class="left">作者</div>
+			<div class="right"><input name="author" type="text" class="text" /></div>
+
+			<div class="clear"></div>
+		</div>
+	</div>
+	<hr />
+		<div class="contentA">
+		<div class="row">
+			<div class="left">年份区间(前)</div>
+			<div class="right"><input name="year1" type="text" class="text" />
+			</div>
+			<div class="left">年份区间(后)</div>
+			<div class="right"><input name="year2" type="text" class="text" /></div>
+			<div class="clear"></div>
+		</div>
+		<div class="row">
+			<div class="left">价格区间(小)</div>
+			<div class="right"><input name="price1" type="text" class="text" /></div>
+			<div class="left">价格区间(大)</div>
+			<div class="right"><input name="price2" type="text" class="text" /></div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<hr />
+		<div class="contentA">
+		<div class="row">
+			<div class="left">Account type</div>
+				<div class="right">
+					<select name="sort" style="width: 195px">
+					<option value="title" selected="selected">书名</option>
+					<option value="category">类别</option>
+					<option value="price">价格</option>
+					<option value="year">时间</option>
+					<option value="author">作者</option>
+					<option value="stock">库存</option>
+					<option value="total">总数</option>
+				</select></div>
+			<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<input name="submit" type="submit" value="查询" />
+	</div>
+</form>
+<form action="<?php echo U('welcome');?>" method="post">
+	</br></br><hr>
+	<input type="hidden" name="userid" value="root" />
+	<input type="hidden" name="password" value="" />
+	<input type="submit" name="submit" value="返回主菜单" />
+</form>
+<div style="text-align:right;clear:both"><br>
+xinhao
+</div>
+</body>
+</html>
